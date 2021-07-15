@@ -15,9 +15,16 @@
             <a class="navbar-brand mynav" href="{% url 'home' %}">Tradexa</a>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'user:create_user' %}">Create User</a></li>
-                <li><a href="{% url 'user:create_post' %}">Create Post</a></li>
-                <li><a href="{% url 'products:add_product' %}">Add Products</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'user:create_user' %}">Create User</a></li>
+                    <li><a href="{% url 'user:create_post' %}">Create Post</a></li>
+                    <li><a href="{% url 'products:add_product' %}">Add Products</a></li>
+
+                    <li><a href="{% url 'user:logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'user:login' %}">Log In</a></li>
+                    <li><a href="{% url 'user:signup' %}">Sign Up</a></li>
+                {% endif %}
 
             </ul>
         </div>
