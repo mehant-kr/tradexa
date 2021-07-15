@@ -1,7 +1,7 @@
 # tradexa
 
-This Application is written in:
-Python 3.8
+This Application is written in:<br>
+Python 3.8<br>
 Django 3.2
 
 I used class based views.
@@ -9,14 +9,21 @@ I used class based views.
 This application has two apps: User and Product
 and each of them uses two diffrent sqlite databases.
 
-There are two models for users:
-User - first_name, last_name, email, password, username
-Post - user, text, created_at, updated_at
+__Two Databases__: <br>
+User_db stores
+- auth_user, sessions, User_post, User_user <br>
 
-And one model for Products
+Product_db stores
+- Product_product
+
+There are two models for users: <br>
+User - first_name, last_name, email, password, username <br>
+Post - user, text, created_at, updated_at<br>
+
+And one model for Products<br>
 Product : name, weight, price, created_at, updated_at
 
-Created forms with templates for user to create a post
+Created forms with templates for authenticated user to create a post
 
 
 ## Execution:
