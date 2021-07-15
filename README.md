@@ -28,7 +28,9 @@ Created forms with templates for authenticated user to create a post
 
 ## Execution:
 Just Run ```sh commands.sh``` if you are on bash shell.
+
 OR
+
 Install the requirements:
 ```
 pip install -r requirements.txt
@@ -55,7 +57,7 @@ python manage.py runserver
 
 ### Exception
 
-No such table
+`No such table` <br>
 Try deleting the database and recreate it using
 ```
 python manage.py migrate --database=User_db  --run-syncdb
